@@ -20,9 +20,9 @@ function echo_objective_func(){
 
 function echo_vars(){
   for _n in $(seq 1 "${1}")  ; do
-    [ ${_n} -eq 1 ] || echo -n '+ '
+    [ "${_n}" -eq 1 ] || echo -n '+ '
     echo -n "x_${_n} *"
-    [ ${_n} -eq ${1} ] || echo
+    [ "${_n}" -eq "${1}" ] || echo
   done
   echo ' ;'
 }
